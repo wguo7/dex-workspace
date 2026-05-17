@@ -1,0 +1,26 @@
+{
+  "services": {
+    "stripe": {
+      "publishable_key": "pk_placeholder_example_not_a_real_stripe_key",
+      "secret_key": "sk_placeholder_example_not_a_real_stripe_secret",
+      "webhook_secret": "whsec_placeholder_example_not_a_real_webhook_secret"
+    },
+    "firebase": {
+      "api_key": "firebase_api_key_placeholder_example_only",
+      "auth_domain": "prod-app-12345.firebaseapp.com",
+      "database_url": "https://prod-app-12345.firebaseio.com",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9W8bA\n-----END PRIVATE KEY-----"
+    },
+    "docker": {
+      "registry_password": "docker_registry_password_placeholder_example",
+      "registry_username": "admin@company.com"
+    },
+    "npm": {
+      "auth_token": "npm_auth_token_placeholder_example_not_real"
+    },
+    "database": {
+      "api_key": "database_api_key_placeholder_example_hexdeadbeef",
+      "readonly_key": "database_readonly_key_placeholder_example_hexcafebabe"
+    }
+  }
+}

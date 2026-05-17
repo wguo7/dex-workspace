@@ -1,0 +1,38 @@
+# Workspace-local
+logs/
+
+# Python envs (control-arena .venv is ~1GB)
+.venv/
+venv/
+**/.venv/
+
+# Bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+
+# ControlArena / IDE output (from upstream .gitignore)
+.env
+experiment_outputs/
+figures/
+control_arena/.cache
+*.eval
+node_modules/
+
+# Packaging / coverage
+*.egg-info/
+.eggs/
+build/
+dist/
+.coverage*
+htmlcov/
+cover/
+
+# OS / editor
+.DS_Store
+*.swp
+*~

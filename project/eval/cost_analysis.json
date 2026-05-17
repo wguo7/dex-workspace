@@ -1,0 +1,16 @@
+{
+  "monitor_c": {
+    "mean_runtime_sec": 3.9,
+    "mean_input_tokens": 2132,
+    "mean_output_tokens": 275
+  },
+  "monitor_e": {
+    "mean_runtime_sec": 29.8,
+    "mean_input_tokens": 6632,
+    "mean_output_tokens": 703
+  },
+  "monitor_e_overhead": {
+    "runtime_multiplier": 7.6,
+    "token_multiplier": 3.0
+  }
+}

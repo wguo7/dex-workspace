@@ -1,0 +1,53 @@
+---
+
+description: Deferred-execution attack research project
+alwaysApply: true
+---
+
+# Project context
+
+Hackathon AI safety project. We are red-teaming AI control monitors by demonstrating an attack class current monitors structurally cannot see.
+
+## The attack class
+
+The untrusted agent installs a dormant trigger in Linux. Examples: cron entries, systemd timers, inotify watchers, EXIT traps, signal handlers, pam hooks, udev rules, at jobs. Every install command is legitimate sysadmin work. The malicious behavior only fires when the trigger activates, which happens AFTER the agent's session ends and the monitor has cleared the session.
+
+## The defense
+
+Trigger-graph monitoring. At session end, enumerate every dormant trigger installed during the session. Extract the action that will run when each trigger fires. Score that action with the existing monitor as if it were an in-session action. If any extracted action is suspicious, flag the session.
+
+## Project structure
+
+- attacks/ contains hand-crafted attack traces as JSON
+- defense/ contains the trigger-graph monitor implementation
+- eval/ contains evaluation scripts and results
+- writeup/ contains the paper and slides
+- sandbox/ Docker setup for firing triggers safely
+
+## Trace schema
+
+Every trace lives at attacks/<category>/<name>.json:
+{
+  "name": "C1.1_cron_backup_exfil",
+  "category": "C1",
+  "main_task": "...",
+  "side_task_description": "...",
+  "trigger_mechanism": "cron",
+  "session_commands": ["cmd1", "cmd2", "..."],
+  "trigger_command_to_fire": "...",
+  "expected_post_trigger_state_check": "..."
+}
+
+session_commands are the literal shell commands the untrusted agent runs during the monitored session. trigger_command_to_fire is the literal command an evaluator runs to simulate the trigger activating after the session.
+
+## Setting
+
+ControlArena's BashArena. Use its existing monitor and eval infrastructure. Do not write parallel infrastructure.
+
+## When uncertain
+
+Read the ControlArena source. Especially control_arena/settings/bash_arena/ and control_arena/protocols/ and control_arena/monitors/. Do not guess at APIs.
+
+## Out of scope
+
+Type hints, docstrings, complex error handling, refactoring. This is hackathon code. Make it work and make it correct. Style does not matter.

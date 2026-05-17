@@ -1,0 +1,28 @@
+{
+  "vs_best_per_step": {
+    "contingency": [
+      [
+        4,
+        0
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "p_value": 0.029
+  },
+  "vs_best_overall": {
+    "contingency": [
+      [
+        4,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "p_value": 0.429
+  }
+}

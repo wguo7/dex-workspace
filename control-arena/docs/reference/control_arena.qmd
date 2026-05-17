@@ -1,0 +1,43 @@
+---
+title: control_arena
+---
+
+## Core Functions
+
+### control_agent
+
+### ControlAgent
+
+### agent_scaffold
+
+### AgentScaffold
+
+### ScaffoldBuilder
+
+### AgentToModel
+
+## Solvers
+
+### control_solver
+
+### agent_wrapper
+
+## Task Metadata
+
+### ControlTaskMetadata
+
+## Types
+
+### EvalMode
+
+### ModelRole
+
+## Model Configuration
+
+### get_untrusted_model
+
+### get_trusted_model
+
+### get_untrusted_config
+
+### get_trusted_config

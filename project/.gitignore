@@ -1,0 +1,15 @@
+# Local eval / Inspect logs (large, machine-specific)
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+*.so
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+*.swp
+*~
