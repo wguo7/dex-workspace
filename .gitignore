@@ -36,3 +36,9 @@ cover/
 .DS_Store
 *.swp
 *~
+
+# Editor and assistant config
+.cursor/
+**/.cursor/
+.claude/
+NOW.md
